@@ -13,7 +13,7 @@ sinusoid.
 EXAMPLE: If you run your code using A=1.0, f = 10.0, phi = 1.0, fs = 50.0 and t = 0.1, the output numpy 
 array should be: array([ 0.54030231, -0.63332387, -0.93171798,  0.05749049,  0.96724906])
 """
-def genSine(A, f, phi, fs, t):
+def genSine(A: float, f: float, phi: float, fs: float, t: float) -> np.array:
     """
     Inputs:
         A (float) =  amplitude of the sinusoid
@@ -26,3 +26,5 @@ def genSine(A, f, phi, fs, t):
         x (numpy array) = The generated sinusoid (use np.cos())
     """
     ## Your code here
+    x = A * np.cos(2*np.pi*f* np.arange(0, t, 1.0/fs) +phi)
+    return x

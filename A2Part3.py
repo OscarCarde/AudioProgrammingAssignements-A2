@@ -1,4 +1,5 @@
 import numpy as np
+from A2Part2 import genComplexSine
 
 """
 A2-Part-3: Implement the discrete Fourier transform (DFT)
@@ -26,3 +27,11 @@ def DFT(x):
         X (numpy array) = The N point DFT of the input sequence x
     """
     ## Your code here
+    N = len(x)
+    X = np.array([])
+
+    for k in range(N):
+        s = genComplexSine(k, N)
+        X = np.append(X, sum(x*np.conjugate(s)))
+
+    return X

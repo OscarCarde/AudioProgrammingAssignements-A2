@@ -16,7 +16,7 @@ EXAMPLE: If you run your function using N=5 and k=1, the function should return 
 array([ 1.0 + 0.j,  0.30901699 - 0.95105652j, -0.80901699 - 0.58778525j, -0.80901699 + 0.58778525j, 
 0.30901699 + 0.95105652j])
 """
-def genComplexSine(k, N):
+def genComplexSine(k: int, N: int) -> np.array:
     """
     Inputs:
         k (integer) = frequency index of the complex sinusoid of the DFT
